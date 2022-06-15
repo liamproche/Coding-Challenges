@@ -1,5 +1,3 @@
-function printArray(array){
-   return array.join(',')
-}
+const printArray = array => array.join(',')
 
 console.log(printArray(['h','o','l','a']))
