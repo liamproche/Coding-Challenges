@@ -1,0 +1,1 @@
+const addFive = n => n + 5
