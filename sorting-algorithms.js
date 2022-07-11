@@ -1,7 +1,7 @@
 function bubbleSort(array) {
     // Make some sort of loop that keeps happening if there were any swaps
     // that happened this turn
-
+    
     // reset swapHappened to false each time so we can detect if a swap
     // happened in this specific iteration.
 
@@ -15,8 +15,23 @@ function bubbleSort(array) {
     // Make sure to keep track of whether a swap happened!
 
     // After both loops have exited, remember to return the array
+    let swapHappened = true
+    while(swapHappened === true){
+        swapHappened = false
+        for (let i = 0; i < array.length; i++){
+            let num = array[i]
+            let nextNum = array[i + 1]
+            if(num > nextNum){
+                num = nextNum
+                nextNum = num
+                swapHappened = true
+            }
+        }
+    }
     return array;
 }
+
+console.log(bubbleSort([3, 2, 1]))
 
 function insertionSort (array) {
   // Loop through each element
