@@ -15,23 +15,18 @@ function bubbleSort(array) {
     // Make sure to keep track of whether a swap happened!
 
     // After both loops have exited, remember to return the array
-    let swapHappened = true
-    while(swapHappened === true){
-        swapHappened = false
-        for (let i = 0; i < array.length; i++){
-            let num = array[i]
-            let nextNum = array[i + 1]
-            if(num > nextNum){
-                num = nextNum
-                nextNum = num
-                swapHappened = true
-            }
+    for(let i = 0; i < array.length; i++){
+      for(let j = 0; j < array.length; j++){
+        if(array[j] > array[j + 1]){
+          let tmp = array[j]
+          array[j] = array[j + 1]
+          array[j + 1] = tmp
         }
+      }
     }
-    return array;
+    console.log(array)
 }
-
-console.log(bubbleSort([3, 2, 1]))
+bubbleSort([3, 2, 1])
 
 function insertionSort (array) {
   // Loop through each element
@@ -54,29 +49,29 @@ function insertionSort (array) {
 
 // Test Script below, DO NOT TOUCH 
 
-mocha.setup('bdd');
-const expect = chai.expect;
+// mocha.setup('bdd');
+// const expect = chai.expect;
 
-describe('Bubble Sort', ()=>{
-  it('should sort the array', ()=>{
-    const myArray = [12,6,3,7,13,8];
-    const sorted = bubbleSort(myArray);
-    expect(sorted).to.deep.equal([3,6,7,8,12,13]);
-    const otherArray = [-3, -1, 5, 100];
-    const otherSorted = bubbleSort(otherArray);
-    expect(otherSorted).to.deep.equal([-3, -1, 5, 100]);
-  })
-});
+// describe('Bubble Sort', ()=>{
+//   it('should sort the array', ()=>{
+//     const myArray = [12,6,3,7,13,8];
+//     const sorted = bubbleSort(myArray);
+//     expect(sorted).to.deep.equal([3,6,7,8,12,13]);
+//     const otherArray = [-3, -1, 5, 100];
+//     const otherSorted = bubbleSort(otherArray);
+//     expect(otherSorted).to.deep.equal([-3, -1, 5, 100]);
+//   })
+// });
 
-describe('Insertion Sort', ()=>{
-  it('should sort the array', ()=>{
-    const myArray = [12,6,3,7,13,8];
-    const sorted = insertionSort(myArray);
-    expect(sorted).to.deep.equal([3,6,7,8,12,13]);
-    const otherArray = [-3, -1, 5, 100];
-    const otherSorted = insertionSort(otherArray);
-    expect(otherSorted).to.deep.equal([-3, -1, 5, 100]);
-  })
-});
+// describe('Insertion Sort', ()=>{
+//   it('should sort the array', ()=>{
+//     const myArray = [12,6,3,7,13,8];
+//     const sorted = insertionSort(myArray);
+//     expect(sorted).to.deep.equal([3,6,7,8,12,13]);
+//     const otherArray = [-3, -1, 5, 100];
+//     const otherSorted = insertionSort(otherArray);
+//     expect(otherSorted).to.deep.equal([-3, -1, 5, 100]);
+//   })
+// });
 
-mocha.run()
+// mocha.run()
