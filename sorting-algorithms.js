@@ -28,8 +28,11 @@ function bubbleSort(arr) {
 }
 console.log(bubbleSort([3, 2, 1]))
 
-function insertionSort (array) {
+function insertionSort (arr) {
   // Loop through each element
+  for(let i = 0; i < arr.length; i++){
+    
+  }
 
   // store the current item value so it can be placed correctly
   // in the sorted portion of the array
