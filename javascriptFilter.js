@@ -2,8 +2,7 @@
 
 // The solution would work like the following:
 
-function getEvenNumbers(numbersArray){
-    return numbersArray.filter(num=>num % 2 === 0)
-}
+const getEvenNumbers = numbersArray => numbersArray.filter(n => n % 2 === 0)
+
 
 console.log(getEvenNumbers([1,2,3,4,5]))
