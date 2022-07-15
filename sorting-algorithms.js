@@ -31,11 +31,16 @@ console.log(bubbleSort([3, 2, 1]))
 function insertionSort (arr) {
   // Loop through each element
   for(let i = 0; i < arr.length; i++){
-    
+    // store the current item value so it can be placed correctly
+    let current = arr[i]
+    // in the sorted portion of the array
+  
+
+
   }
 
-  // store the current item value so it can be placed correctly
-  // in the sorted portion of the array
+
+
 
   // Loop backward through the sorted portion of the array
   // and scoot everything over until you find the right place to
