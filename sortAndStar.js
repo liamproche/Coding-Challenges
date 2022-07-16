@@ -4,12 +4,10 @@
 
 // You should not remove or add elements from/to the array.
 
-function twoSort(s) {
-    if(s){
-        const arr = s.toLowerCase().split(" ")
+function twoSort(arr) {
+    if(arr){
         let output = ""
-        let sortedArr = arr.sort()
-        console.log(sortedArr)
+        const sortedArr = arr.sort()
         for(char of sortedArr[0]){
             output += char + "***"
         }
@@ -22,4 +20,14 @@ function twoSort(s) {
 
 console.log(twoSort(""))
 
-//if 
+//define a variable to hold the output
+
+//sort the arr and store it in a new vairable
+
+//loop though the first str in the sorted arr
+    //for each char add to the output + ***
+
+//return the output slicing the last 3 characters 
+
+//else (noinput) return ???
+
