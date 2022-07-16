@@ -2,22 +2,25 @@
 
 // Division by zero should return NaN
 
-function remainder(n, m){
-    if(n > 0 && m > 0){
-        if(n === 0 || m === 0){
-            return NaN
-        }
-        else if(n < m){
+function remainder(n, m){  
+    if(n === 0 || m === 0){
+        if(n < 0){
             return m % n
         }
-        return n % m
+        else if(m < 0){
+            return n % m
+        }
+        else{
+            return NaN
+        }
     }
-    else{
+    else if(n < m){
         return m % n
     }
+    return n % m
 }
 
-console.log(remainder(17, 5))
+console.log(remainder(0, -1))
 
 //if n < m
     //return m % n
