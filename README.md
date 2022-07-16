@@ -1,2 +1,2 @@
-<h1>Code Wars Challenges</h1>
-<p>Ongoing documentation of challenges attempted through Code Wars</p>
+<h1>Coding Challenges</h1>
+<p>Ongoing documentation of challenges attempted and solved through various coding platforms (mainly CodeWars)</p>
