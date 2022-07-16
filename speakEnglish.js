@@ -13,16 +13,8 @@
 // contains "English", false for it does not.
 
 function spEng(sentence){
-    let str = ''
-    for (char of sentence){
-        if(char.toLowerCase() === 'e' || char.toLowerCase() === 'n' || char.toLowerCase() === 'g' || char.toLowerCase() === 'l' || char.toLowerCase() === 'i' || char.toLowerCase() === 's' || char.toLowerCase() === 'h'){
-            str += char.toLowerCase()
-        }
-    }
-    if (str.includes('english')){
-        return true
-    }
-    return false
+    let lowerCase = sentence.toLowerCase()
+    return lowerCase.includes('english')
 }
 
 console.log(spEng('abcdnEglish'))
