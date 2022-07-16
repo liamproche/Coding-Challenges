@@ -1,5 +1,7 @@
 // You will be given an array of numbers. You have to sort the odd numbers in ascending order while leaving the even numbers at their original positions.
 
+//NOT SOLVED- Problem with sorting negative numbers
+
 function sortArray(array) {
     const oddNums = []
     const evenNums = []
@@ -13,14 +15,14 @@ function sortArray(array) {
             evenNums.push(array[i])
         }
     }
-    const sortedOddNumsArr = oddNums.sort((a, b)=>a - b)
+    const sortedOdds = oddNums.sort((a, b)=>a - b)
     for(let i = 0; i < evenNums.length; i++){
-        sortedOddNumsArr.splice(evenNumIndexes[i], 0, evenNums[i])
+        sortedOdds.splice(evenNumIndexes[i], 0, evenNums[i])
     }
-    return sortedOddNumsArr
+    return sortedOdds
 }
 
-console.log(sortArray([-8, -9, -2, -1]))
+console.log(sortArray([-9, -7, -1]))
 
 
 //define an arr to hold odds
