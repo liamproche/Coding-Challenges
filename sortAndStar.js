@@ -5,15 +5,12 @@
 // You should not remove or add elements from/to the array.
 
 function twoSort(arr) {
-    if(arr){
-        let output = ""
-        const sortedArr = arr.sort()
-        for(char of sortedArr[0]){
-            output += char + "***"
-        }
-        return output.slice(0, -3)
+    let output = ""
+    const sortedArr = arr.sort()
+    for(char of sortedArr[0]){
+        output += char + "***"
     }
-    return "b***i***t***c***o***i***n"
+    return output.slice(0, -3)
 }
 
 console.log(twoSort(""))
