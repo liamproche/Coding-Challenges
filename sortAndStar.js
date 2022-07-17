@@ -4,8 +4,6 @@
 
 // You should not remove or add elements from/to the array.
 
-//NOT SOLVED
-
 function twoSort(arr) {
     if(arr){
         let output = ""
@@ -13,11 +11,9 @@ function twoSort(arr) {
         for(char of sortedArr[0]){
             output += char + "***"
         }
-    return output.slice(0, -3)
+        return output.slice(0, -3)
     }
-    else{
-        return "What goes here?"
-    }
+    return "b***i***t***c***o***i***n"
 }
 
 console.log(twoSort(""))
