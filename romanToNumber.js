@@ -61,8 +61,6 @@ const romanToInt = (numerals) => {
             }
         }
     }
-    console.log(arr)
-    console.log(arrToSum)
     return arrToSum.reduce((a, b) => a + b)
 }
 
