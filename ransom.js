@@ -2,7 +2,7 @@
 
 // Each letter in magazine can only be used once in ransomNote.
 
-const canConstruct = (ransomNote, magazine) => {
+function canConstruct  (ransomNote, magazine) {
     const arr = magazine.split('')
     for(letter of ransomNote){
         if(!arr.includes(letter)){
@@ -16,6 +16,8 @@ const canConstruct = (ransomNote, magazine) => {
     return true
 };
 
+
+
 console.log(canConstruct('aa', 'ab'))
 
 //loop through the letters in the ransom note
@@ -24,3 +26,4 @@ console.log(canConstruct('aa', 'ab'))
     //magazine.splice(magazine.indexOf(letter))
     //return true
 
+module.exports = canConstruct
