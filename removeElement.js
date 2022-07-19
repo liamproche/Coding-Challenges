@@ -12,7 +12,7 @@ const removeElement = (nums, val) =>{
             nums.splice(i, 1)
         }
     }
-    return nums.sort().length
+    return nums
 }
 
 console.log(removeElement([3,2,2,3], 3))
