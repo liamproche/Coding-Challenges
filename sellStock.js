@@ -34,3 +34,5 @@ console.log(maxProfit([2, 4, 1]))
 
 //return the profit
 
+// Lots of help on this one from https://relatablecode.com/javascript-leetcode-best-time-to-buy-and-sell-stock
+
