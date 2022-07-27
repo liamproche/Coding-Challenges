@@ -3,29 +3,28 @@
 // If there is no common prefix, return an empty string
 
 const longestCommonPrefix = strs => {
-    let prefix = strs[0]
-    for (let i = 1; i < strs.length; i++){
+    const prefix = strs[0].split('')
+    for(let i = 1; i < strs.length; i++){
         let str = strs[i]
-        for(let j = 0; j < str.length; j++){
-            let letter = str[j]
-            if(prefix.includes(letter)){
-                console.log("got it")
-            }
-            else{
-                prefix.slice(j)
+        for(let j = 0; j < prefix.length; j++){
+            if(str[j] !== prefix[j]){
+                prefix.splice(j)
             }
         }
     }
-    console.log(prefix)
+    return prefix.join('')
 };
 
-longestCommonPrefix(["flower", "flow", "flight"])
+module.exports = {
+    longestCommonPrefix
+}
 
-//define a variable to hold the prefix and set it to the first str
-//for let i = 1; i < str.length; i++
-    //let str = strs[i]
-    //for let j = 0; j < str.lengthl j++
-        //let letter = str[j]
-        //if !prefix.includes(letter)
-            //prefix.subString(j)
-//return the prefix variable
+// longestCommonPrefix(["flower", "flow", "flight"])
+
+//define a variable to hold prefix and set it to an arr of the first str
+
+//iterate over the strs arr starting at the second element
+    //iterate over the str
+        //if prefix[j] !== str[j]
+            //prefix.splice(j, 1)
+//console.log(prefix)
