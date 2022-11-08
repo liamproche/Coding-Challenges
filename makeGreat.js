@@ -11,17 +11,18 @@
 // Notice that an empty string is also good.
 
 const makeGood = (str)=> {
+    let output = str[0]
     for(let i = 0; i < str.length; i++){
         let currChar = str[i]
         let nextChar = str[i + 1]
-        if(nextChar = currChar.toUpperCase()){
-            str = str.substring(0, i + 1) + str.substring(i + 2, str.length)
+        if(nextChar && nextChar != currChar.toUpperCase()){
+            output += nextChar
         }
     }
-    return str
+    return output
 };
 
-console.log(makeGood("tryYingtThis"))
+console.log(makeGood("abBAcC"))
 
 //iterate through the str using standard for loop
 
