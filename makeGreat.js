@@ -1,0 +1,36 @@
+// Given a string s of lower and upper case English letters.
+
+// A good string is a string which doesn't have two adjacent characters s[i] and s[i + 1] where:
+
+// 0 <= i <= s.length - 2
+// s[i] is a lower-case letter and s[i + 1] is the same letter but in upper-case or vice-versa.
+// To make the string good, you can choose two adjacent characters that make the string bad and remove them. You can keep doing this until the string becomes good.
+
+// Return the string after making it good. The answer is guaranteed to be unique under the given constraints.
+
+// Notice that an empty string is also good.
+
+const makeGood = (str)=> {
+    for(let i = 0; i < str.length; i++){
+        let currChar = str[i]
+        let nextChar = str[i + 1]
+        if(nextChar = currChar.toUpperCase()){
+            str = str.substring(0, i + 1) + str.substring(i + 2, str.length)
+        }
+    }
+    return str
+};
+
+console.log(makeGood("tryYingtThis"))
+
+//iterate through the str using standard for loop
+
+//define variables
+    //curChar = str[i]
+    //nextChar = str[i + 1]
+
+//if nextChar = curChar.toUpperCase
+//str.slice(i + 1, 1)
+
+
+//return str
