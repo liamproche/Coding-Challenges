@@ -10,7 +10,6 @@ const containsDuplicate = (nums) => {
             elements[num]++
         }
     }
-    console.log(elements)
     for(let element in elements){
         if(elements[element] > 1){
             return true
