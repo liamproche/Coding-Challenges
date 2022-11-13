@@ -8,9 +8,17 @@
 
 
 const reverseWords = (s) => {
-    const firstArr = []
-    const secodArr = s.split(' ')
+    const arr = []
+    const nextArr = s.split(' ')
+    for(let word of nextArr){
+        if(word != ''){
+            arr.unshift(word)
+        }
+    }
+    return arr.join(' ')
 };
+
+console.log(reverseWords("a good   example"))
 
 //define an empty arr
 
