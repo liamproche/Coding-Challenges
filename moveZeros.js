@@ -3,6 +3,7 @@
 // Note that you must do this in-place without making a copy of the array.
 
 var moveZeroes = function(nums) {
+    console.log('running')
     let zerosToAdd = 0
     if(nums[0] === 0){
         nums.splice(0, 1)
@@ -12,9 +13,9 @@ var moveZeroes = function(nums) {
         if(nums[i] === 0){
             nums.splice(i, 1)
             zerosToAdd++
-            i--
         }
     }
+    console.log(zerosToAdd)
     for(let i = 0; i < zerosToAdd; i++){
         nums.push(0)
     }

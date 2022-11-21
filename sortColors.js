@@ -5,8 +5,23 @@
 // You must solve this problem without using the library's sort function.
 
 const sortColors = (nums) => {
-    
+    for(let i = 0; i < nums.length; i++){
+        if(nums[i] === 0){
+            nums.splice(i, 1)
+            nums.unshift(0)
+        }
+    }
+    for(let i = 0; i < nums.length; i++){
+        if(nums[i] === 2){
+            nums.splice(i, 1)
+            nums.push(2)
+            i--
+        }
+    }
+    return nums
 };
+
+console.log(sortColors([2,0,2,1,1,0]))
 
 //define an empty arr for red
 
